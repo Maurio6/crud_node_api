@@ -1,18 +1,25 @@
 {
-  "name": "crud",
+  "name": "crud-rbac-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Sistema CRUD con RBAC (Role-Based Access Control) y permisos directos por usuario",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "seed": "node src/utils/seed.js"
   },
-  "keywords": [],
+  "keywords": ["rbac", "nodejs", "express", "mongodb", "jwt", "permissions"],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
-    "express": "^5.2.1"
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.4.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
